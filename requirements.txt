@@ -7,6 +7,14 @@ uvicorn[standard]
 fastapi
 sqlalchemy
 pydantic
+psycopg2
+
 
 tiktoken
 
+
+requests
+
+UUID
+datetime
+typing

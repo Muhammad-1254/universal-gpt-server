@@ -2,8 +2,8 @@ from sqlalchemy import (ARRAY, JSON, Boolean, Column, ForeignKey, Integer,
                         String)
 from sqlalchemy.orm import relationship
 
-from db.database import Base
-from db.models.mixin import Timestamp
+from ..database import Base
+from ..models.mixin import Timestamp
 
 
 class User(Timestamp, Base):

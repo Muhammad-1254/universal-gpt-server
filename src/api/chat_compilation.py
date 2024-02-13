@@ -1,9 +1,10 @@
 
-from db.database import get_db
-from db.models.User import UserChat
 from fastapi import (APIRouter, Depends, HTTPException, WebSocket,
                      WebSocketException, status)
 from sqlalchemy.orm import Session
+
+from ..db.database import get_db
+from ..db.models.User import UserChat
 
 router = APIRouter()
 

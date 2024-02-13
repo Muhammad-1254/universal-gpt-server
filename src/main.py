@@ -1,10 +1,8 @@
-
-
-from db.database import engine
-from db.models.User import Base
 from fastapi import FastAPI
 
-from api import chat_compilation
+from .api import chat_compilation
+from .db.database import engine
+from .db.models.User import Base
 
 Base.metadata.create_all(bind=engine)
 
@@ -94,9 +92,9 @@ app.include_router(chat_compilation.router, prefix='/api/v1/users/chat')
 
 
 
-if __name__ == 'main':
-    import uvicorn
-    uvicorn.run(app='main:app', host='0.0.0.0',port=8000, reload=True, workers=1)
+# if __name__ == 'main':
+#     import uvicorn
+#     uvicorn.run(app='main:app', host='0.0.0.0',port=8000, reload=True, workers=1)
 
 
 
@@ -104,8 +102,3 @@ if __name__ == 'main':
 
 
 
-
-if __name__ == '__main__':
-    import uvicorn
-    uvicorn.run(app='main:app', host='0.0.0.0',
-                port=8000, reload=True, workers=1)                
